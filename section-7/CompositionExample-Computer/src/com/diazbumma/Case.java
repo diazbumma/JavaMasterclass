@@ -12,6 +12,10 @@ public class Case {
         this.dimension = dimension;
     }
 
+    public void pressPowerButton(Monitor monitor) {
+        monitor.displayText("Computer is powering up..");
+    }
+
     public String getBrand() {
         return brand;
     }

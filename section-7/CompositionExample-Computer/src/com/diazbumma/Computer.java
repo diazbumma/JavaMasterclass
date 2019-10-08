@@ -14,6 +14,21 @@ public class Computer {
         this.processor = processor;
     }
 
+    public void powerUp() {
+        theCase.pressPowerButton(monitor);
+        showLogo();
+    }
+
+    private void showLogo() {
+        int xPos = monitor.getResolution().getHorizontal() / 2;
+        int yPos = monitor.getResolution().getVertical() / 2;
+        monitor.drawPixelAt(xPos, yPos, "Blue");
+    }
+
+    public void showText(String text) {
+        monitor.displayText(text);
+    }
+
     public Case getTheCase() {
         return theCase;
     }

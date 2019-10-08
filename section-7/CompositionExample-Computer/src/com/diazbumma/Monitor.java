@@ -14,7 +14,11 @@ public class Monitor {
         this.dimension = dimension;
     }
 
-    public static void displayText(String text) {
+    public void drawPixelAt(int x, int y, String color) {
+        System.out.println("Drawing at " + x + "," + y + " with " + color);
+    }
+
+    public void displayText(String text) {
         System.out.println("Monitor is displaying text: " + text);
     }
 

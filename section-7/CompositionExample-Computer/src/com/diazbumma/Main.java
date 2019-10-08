@@ -20,10 +20,11 @@ public class Main {
 	    //show information case width
         System.out.println("Computer case width: " + myComputer.getTheCase().getDimension().getWidth());
 
-        //monitor static function
-        Monitor.displayText("Lorem ipsum dolor");
-
         //show general computer information
         System.out.println(myComputer.toString());
+
+        //do something with the computer
+        myComputer.powerUp();
+        myComputer.showText("Lorem Ipsum");
     }
 }
