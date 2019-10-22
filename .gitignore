@@ -1,2 +1,7 @@
+# Ignoring idea
 .idea
 .idea/
+
+# Compiled class file
+*.class
+out/
