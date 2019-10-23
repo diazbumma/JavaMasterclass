@@ -1,7 +1,16 @@
 # Ignoring idea
-.idea
+out/
 .idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
 
 # Compiled class file
+.mtj.tmp/
 *.class
-out/
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
