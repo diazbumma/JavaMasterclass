@@ -25,10 +25,11 @@ public class Main {
             System.out.println("Choose menu\n" +
                     "1. Show contact list\n" +
                     "2. Add new contact\n" +
-                    "3. Update existing contact name\n" +
-                    "4. Update existing contact number\n" +
-                    "5. Delete contact\n" +
-                    "6. Keluar\n" +
+                    "3. Show contact\n" +
+                    "4. Update existing contact name\n" +
+                    "5. Update existing contact number\n" +
+                    "6. Delete contact\n" +
+                    "7. Exit.\n" +
                     "Enter menu:");
             int select = scanner.nextInt();
             scanner.nextLine();
@@ -41,9 +42,16 @@ public class Main {
                     String name = scanner.nextLine();
                     System.out.println("Enter number:");
                     String number = scanner.nextLine();
-                    mobilePhone.newContact(name, Long.parseLong(number));
+                    Contact newContact = Contact.createContact(name, Long.parseLong(number));
+                    mobilePhone.newContact(newContact);
                     break;
                 case 3:
+                    mobilePhone.showContactList();
+                    System.out.println("Enter contact name to show info:");
+                    String contactToShow = scanner.nextLine();
+                    mobilePhone.showContact(contactToShow);
+                    break;
+                case 4:
                     mobilePhone.showContactList();
                     System.out.println("Enter contact name to edit:");
                     String contactName = scanner.nextLine();
@@ -51,7 +59,7 @@ public class Main {
                     String newName = scanner.nextLine();
                     mobilePhone.modifyContact(contactName, newName);
                     break;
-                case 4:
+                case 5:
                     mobilePhone.showContactList();
                     System.out.println("Enter contact name to edit:");
                     String contactName2 = scanner.nextLine();
@@ -59,13 +67,13 @@ public class Main {
                     String newNumber = scanner.nextLine();
                     mobilePhone.modifyContact(contactName2, Long.parseLong(newNumber));
                     break;
-                case 5:
+                case 6:
                     mobilePhone.showContactList();
                     System.out.println("Enter contact name to delete:");
                     String contactName3 = scanner.nextLine();
                     mobilePhone.removeContact(contactName3);
                     break;
-                case 6:
+                case 7:
                     return;
                 default:
                     System.out.println("Menu unrecognized.");

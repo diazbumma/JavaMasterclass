@@ -10,6 +10,10 @@ public class Contact {
         this.number = number;
     }
 
+    public static Contact createContact(String name, long number) {
+        return new Contact(name, number);
+    }
+
     public void setName(String name) {
         this.name = name;
     }

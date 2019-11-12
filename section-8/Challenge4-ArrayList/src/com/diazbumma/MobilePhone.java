@@ -10,8 +10,8 @@ public class MobilePhone {
         contacts = new ArrayList<>();
     }
 
-    public void newContact(String name, long number) {
-        contacts.add(new Contact(name, number));
+    public void newContact(Contact newContact) {
+        contacts.add(newContact);
     }
 
     public void showContactList() {
