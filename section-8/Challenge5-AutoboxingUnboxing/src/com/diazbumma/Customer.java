@@ -20,10 +20,6 @@ public class Customer {
         return name;
     }
 
-    public ArrayList<Double> getTransactions() {
-        return transactions;
-    }
-
     public void addTrx(Double trx) {
         transactions.add(trx);
     }
